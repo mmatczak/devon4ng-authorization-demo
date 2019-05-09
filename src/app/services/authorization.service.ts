@@ -8,7 +8,7 @@ export enum Right {
 
 @Injectable()
 export class AuthorizationService implements IsAuthorized<Right> {
-  private userRights = [Right.Admin];
+  private userRights = [Right.User];
 
   isAuthorizedForRightsOf(requiredRights: Right[]): Observable<boolean> {
     if (requiredRights && requiredRights.length > 0) {
